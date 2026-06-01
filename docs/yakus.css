@@ -1,0 +1,276 @@
+/* ─── Tokens ──────────────────────────────────────────────────── */
+:root {
+  --bg:           #f4f4f5;
+  --surface:      #ffffff;
+  --text:         #18181b;
+  --text-muted:   #71717a;
+  --border:       #e4e4e7;
+  --accent:       #c0392b;
+  --nav-bg:       #1e293b;
+  --nav-text:     #f1f5f9;
+  --tag-bg:       #e0f2fe;
+  --tag-fg:       #0369a1;
+  --tag-ym-bg:    #fee2e2;
+  --tag-ym-fg:    #b91c1c;
+  --tag-com-bg:   #dcfce7;
+  --tag-com-fg:   #15803d;
+  --tag-rare-bg:  #fef9c3;
+  --tag-rare-fg:  #92400e;
+  --tag-bonus-bg: #f3f4f6;
+  --tag-bonus-fg: #4b5563;
+  --shadow:       0 1px 3px rgba(0,0,0,.08);
+}
+
+[data-theme="dark"] {
+  --bg:           #0f172a;
+  --surface:      #1e293b;
+  --text:         #e2e8f0;
+  --text-muted:   #94a3b8;
+  --border:       #334155;
+  --accent:       #ef4444;
+  --nav-bg:       #020617;
+  --nav-text:     #e2e8f0;
+  --tag-bg:       #0c4a6e;
+  --tag-fg:       #7dd3fc;
+  --tag-ym-bg:    #450a0a;
+  --tag-ym-fg:    #fca5a5;
+  --tag-com-bg:   #052e16;
+  --tag-com-fg:   #86efac;
+  --tag-rare-bg:  #2d1b00;
+  --tag-rare-fg:  #fde68a;
+  --tag-bonus-bg: #1e293b;
+  --tag-bonus-fg: #94a3b8;
+  --shadow:       0 1px 3px rgba(0,0,0,.3);
+}
+
+/* ─── Reset ───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* ─── Navbar ──────────────────────────────────────────────────── */
+.navbar {
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: .6rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 52px;
+}
+
+.nav-brand {
+  color: var(--nav-text);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  letter-spacing: .01em;
+  margin-right: .25rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: .25rem;
+}
+
+.nav-links a {
+  color: var(--nav-text);
+  text-decoration: none;
+  padding: .3rem .65rem;
+  border-radius: 5px;
+  opacity: .75;
+  font-size: .9rem;
+  transition: opacity .15s, background .15s;
+}
+.nav-links a:hover  { opacity: 1; background: rgba(255,255,255,.1); }
+.nav-links a.active { opacity: 1; background: rgba(255,255,255,.15); }
+
+.nav-controls {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  flex-wrap: wrap;
+}
+
+/* ─── Shared button / select style ───────────────────────────── */
+.nav-btn,
+#lang-select {
+  background: rgba(255,255,255,.12);
+  color: var(--nav-text);
+  border: 1px solid rgba(255,255,255,.2);
+  padding: .3rem .65rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: .85rem;
+  transition: background .15s;
+  white-space: nowrap;
+}
+.nav-btn:hover,
+#lang-select:hover { background: rgba(255,255,255,.22); }
+
+.nav-btn.filter-active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ─── Filter dropdown ─────────────────────────────────────────── */
+.dropdown { position: relative; }
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .4rem;
+  min-width: 230px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+  z-index: 200;
+}
+.dropdown-menu.open { display: block; }
+
+.filter-opt {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .4rem .5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: .875rem;
+  user-select: none;
+}
+.filter-opt:hover { background: var(--bg); }
+.filter-opt input[type="checkbox"] { cursor: pointer; accent-color: var(--accent); }
+
+/* ─── Main / grid ─────────────────────────────────────────────── */
+main {
+  padding: 1.25rem 1rem;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+#yaku-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  #yaku-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  #yaku-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ─── Yaku card ───────────────────────────────────────────────── */
+.yaku-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  box-shadow: var(--shadow);
+  transition: border-color .15s;
+}
+.yaku-card.is-yakuman {
+  border-color: var(--accent);
+  border-width: 2px;
+}
+
+.yaku-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: .5rem;
+}
+
+.yaku-name {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.yaku-value {
+  text-align: right;
+  flex-shrink: 0;
+  font-size: .8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+.yaku-value .v-ym  { color: var(--accent); font-weight: 700; font-size: .9rem; }
+.yaku-value .v-han { color: var(--accent); font-weight: 700; }
+
+.yaku-desc {
+  font-size: .875rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.yaku-notes {
+  font-size: .8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.45;
+}
+.yaku-notes::before { content: "Note: "; font-style: normal; font-weight: 600; }
+
+.yaku-example {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .78rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: .3rem .5rem;
+  color: var(--text-muted);
+  word-break: break-all;
+}
+.yaku-example::before { content: "e.g. "; font-style: italic; }
+
+.yaku-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  margin-top: auto;
+  padding-top: .25rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 600;
+  padding: .1rem .45rem;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--tag-fg);
+  letter-spacing: .02em;
+}
+.tag.ym    { background: var(--tag-ym-bg);    color: var(--tag-ym-fg); }
+.tag.com   { background: var(--tag-com-bg);   color: var(--tag-com-fg); }
+.tag.rare  { background: var(--tag-rare-bg);  color: var(--tag-rare-fg); }
+.tag.bonus { background: var(--tag-bonus-bg); color: var(--tag-bonus-fg); }
+
+/* ─── Empty state ─────────────────────────────────────────────── */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+  font-size: .95rem;
+}
