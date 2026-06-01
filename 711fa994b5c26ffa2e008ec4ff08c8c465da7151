@@ -1,0 +1,21 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "711fa994b5c26ffa2e008ec4ff08c8c465da7151",
+  "prompts": {
+    "666a99f3b295655f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b2f7f0f8-5467-4c1d-8ec7-1927a31e70d7",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "amphipath",
+      "messages": [],
+      "total_additions": 16559,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  }
+}
