@@ -189,8 +189,8 @@ main {
   box-shadow: var(--shadow);
   transition: border-color .15s;
 }
-.yaku-card.is-yakuman {
-  border-color: var(--accent);
+.yaku-card.is-common {
+  border-color: var(--tag-com-fg);
   border-width: 2px;
 }
 
@@ -232,16 +232,93 @@ main {
 .yaku-notes::before { content: "Note: "; font-style: normal; font-weight: 600; }
 
 .yaku-example {
-  font-family: "SFMono-Regular", Consolas, monospace;
   font-size: .78rem;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: .3rem .5rem;
   color: var(--text-muted);
-  word-break: break-all;
+  overflow: visible;
+  padding: .1rem 0 .8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
-.yaku-example::before { content: "e.g. "; font-style: italic; }
+.yaku-example::before { font-style: italic; }
+
+/* ─── Tile rendering ──────────────────────────────────────────── */
+.tile-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  width: 21px;
+  height: 28px;
+  position: relative;
+}
+.tile-wrap.tile-rotated {
+  vertical-align: bottom;
+  width: 28px;
+  height: 21px;
+}
+.tile-inner {
+  position: absolute;
+  top: 0; left: 0;
+  width: 21px;
+  height: 28px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.tile-wrap.tile-rotated .tile-inner {
+  top: -3.5px;
+  left: 3.5px;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+.tile-inner .tile-front {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.tile-inner .tile-face {
+  position: absolute;
+  inset: 5%;
+  width: 90%;
+  height: 90%;
+  display: block;
+}
+.tile-space {
+  display: inline-block;
+  width: 5px;
+}
+.tile-linebreak {
+  flex-basis: 100%;
+  height: 0;
+}
+.tile-group-concealed {
+  display: inline-block;
+  position: relative;
+  border: 1px dashed #aaa;
+  border-radius: 8px;
+  padding: 2px 2px;
+  margin: 0 14px -3px 0;
+  vertical-align: middle;
+}
+.concealed-icon {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.concealed-icon img {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
 
 .yaku-tags {
   display: flex;

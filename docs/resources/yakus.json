@@ -31,8 +31,8 @@
     "value_open": null,
     "value_closed": 1,
     "description": "Win by Tsumo with a closed hand.",
-    "notes": "The only call that does not open the hand is a Closed Kan.",
-    "example": null,
+    "notes": "Closed Kan does not open the hand.",
+    "example": "((:1s::2s::3s: :2p::3p::4p: :2m::2m::2m: :7s::8s::9s: :5z: :5z:))",
     "common": true,
     "on_win": true
   },
@@ -41,7 +41,7 @@
     "value_open": 1,
     "value_closed": 1,
     "description": "Hand composed entirely of tiles numbered 2–8.",
-    "example": "2m3m4m 3p4p5p 6s7s8s 2z2z + 5p",
+    "example": ":2s::3s::4s: :5p::5p::5p: :7s::7s: :6p::6p: :5m_::4m::6m: :6p:",
     "common": true
   },
   {
@@ -49,7 +49,7 @@
     "value_open": null,
     "value_closed": 1,
     "description": "All TKEY_GLOSSARY_MENTSU_P must be TKEY_GLOSSARY_SHUNTSU_P. The head must not be yakuhai. The winning tile must complete one TKEY_GLOSSARY_SHUNTSU from the side.",
-    "example": "1m2m3m 4p5p6p 7s8s9s 2z2z + 3m or 6p",
+    "example": "((:1m::2m::3m: :2s::3s::4s: :6m::7m::8m: :5m::6m: :4z::4z:)) :7m:",
     "common": true,
     "shuntsu_based": true
   },
@@ -58,7 +58,7 @@
     "value_open": null,
     "value_closed": 1,
     "description": "Two identical TKEY_GLOSSARY_SHUNTSU_P.",
-    "example": "1m2m3m 1m2m3m 5p6p7p 9s9s + 5p",
+    "example": "((:1m::2m::3m: :1m::3m: :b::b::b: :b::b::b: :b::b:)) :2m:",
     "shuntsu_based": true
   },
   {
@@ -66,7 +66,7 @@
     "value_open": 1,
     "value_closed": 1,
     "description": "A triplet of green dragon tiles.",
-    "example": null,
+    "example": ":6z::6z::6z: :b::b::b: :b::b::b: :b::b::b: :b::b:",
     "common": true,
     "toitsu_based": true,
     "jihai_based": true
@@ -76,7 +76,7 @@
     "value_open": 1,
     "value_closed": 1,
     "description": "A triplet of red dragon tiles.",
-    "example": null,
+    "example": ":7z::7z::7z: :b::b::b: :b::b::b: :b::b::b: :b::b:",
     "common": true,
     "toitsu_based": true,
     "jihai_based": true
@@ -86,7 +86,7 @@
     "value_open": 1,
     "value_closed": 1,
     "description": "A triplet of white dragon tiles.",
-    "example": null,
+    "example": ":5z::5z::5z: :b::b::b: :b::b::b: :b::b::b: :b::b:",
     "common": true,
     "toitsu_based": true,
     "jihai_based": true
@@ -97,7 +97,7 @@
     "value_closed": 1,
     "description": "A triplet of your seat wind tiles.",
     "notes": "Stacks with TKEY_YAKU_BAKAZE. Can be referred to as TKEY_YAKU_DABUTON/TKEY_YAKU_DABUNAN in this case.",
-    "example": null,
+    "example": ":4z::4z::4z: :b::b::b: :b::b::b: :b::b::b: :b::b:",
     "common": true,
     "toitsu_based": true,
     "jihai_based": true
@@ -108,7 +108,7 @@
     "value_closed": 1,
     "description": "A triplet of the round wind tiles.",
     "notes": "Stacks with TKEY_YAKU_JIKAZE. Can be referred to as TKEY_YAKU_DABUTON/TKEY_YAKU_DABUNAN in this case.",
-    "example": null,
+    "example": ":1z::1z::1z: :b::b::b: :b::b::b: :b::b::b: :b::b:",
     "common": true,
     "toitsu_based": true,
     "jihai_based": true
@@ -157,7 +157,7 @@
     "value_open": 2,
     "value_closed": 2,
     "description": "Three self-drawn TKEY_GLOSSARY_KOUTSU_P in the hand.",
-    "example": "3m3m3m 6p6p6p 9s9s9s 1z1z + 9s (tsumo)",
+    "example": "((:3m::3m::3m: :2m::2m::2m: :5p::5p::5p:)) :1z: :5m_::4m::6m: :1z:",
     "notes": "If winning by Ron on a TKEY_GLOSSARY_SHANPON, the winning tile is in an open TKEY_GLOSSARY_KOUTSU, not a closed one.",
     "rare": true,
     "toitsu_based": true
@@ -167,7 +167,7 @@
     "value_open": 2,
     "value_closed": 2,
     "description": "Three kans of any kind in the hand.",
-    "example": null,
+    "example": ":b::3m::3m::b: :5m::5m_::5m::5m: :b::5p::5p::b: :4z::4z: :6p::7p: :8p:",
     "rare": true,
     "toitsu_based": true
   },
@@ -176,7 +176,7 @@
     "value_open": 2,
     "value_closed": 2,
     "description": "Hand composed entirely of TKEY_GLOSSARY_KOUTSU_P and a pair.",
-    "example": "2m2m2m 5p5p5p 8s8s8s 3z3z + 3z",
+    "example": ":3m::3m::3m: :4z::4z::4z: :2p::2p: :1p::1p: :5m::5m::5m_: :1p:",
     "common": true,
     "toitsu_based": true
   },
@@ -185,7 +185,7 @@
     "value_open": 1,
     "value_closed": 2,
     "description": "One TKEY_GLOSSARY_SHUNTSU of each suit with the same numbers.",
-    "example": "1m2m3m 1p2p3p 1s2s3s 7z7z + 2m",
+    "example": ":1m::2m::3m: :1p::2p::3p: :1s::2s::3s: :b::b::b: :b::b:",
     "shuntsu_based": true
   },
   {
@@ -193,7 +193,7 @@
     "value_open": 2,
     "value_closed": 2,
     "description": "One TKEY_GLOSSARY_KOUTSU of each suit with the same number.",
-    "example": "5m5m5m 5p5p5p 5s5s5s 1z1z + 1z",
+    "example": ":5m::5m::5m: :5p::5p::5p: :5s::5s::5s: :b::b::b: :b::b:",
     "rare": true,
     "toitsu_based": true
   },
@@ -202,7 +202,7 @@
     "value_open": 1,
     "value_closed": 2,
     "description": "Three TKEY_GLOSSARY_SHUNTSU_P in the same suit spanning 1–3, 4–6, and 7–9.",
-    "example": "1m2m3m 4m5m6m 7m8m9m 2p2p + 1m",
+    "example": ":1m::2m::3m: :7m::8m::9m: :b::b::b: :b::b: :5m_::4m::6m:",
     "notes": "The hand must be interpretable as having each TKEY_GLOSSARY_SHUNTSU as 123/456/789. e.g. 11 234 456 789 doesn't quality for this yaku.",
     "shuntsu_based": true
   },
@@ -211,7 +211,7 @@
     "value_open": 1,
     "value_closed": 2,
     "description": "Every TKEY_GLOSSARY_MENTSU and the pair contains a terminal or honour tile, and there's at least one TKEY_GLOSSARY_SHUNTSU.",
-    "example": "1m2m3m 7p8p9p 1s1s1s 9z9z + 1m",
+    "example": ":1m::2m::3m: :7s::8s::9s: :1z::1z::1z: :1p::1p: :3z::3z: :3z:",
     "rare": true,
     "jihai_based": true,
     "yaochuu_based": true
@@ -222,7 +222,7 @@
     "value_closed": 2,
     "description": "A hand of seven different pairs. Always worth 25 fu.",
     "notes": "Can stack with all other yaku that don't need to have TKEY_GLOSSARY_SHUNTSU or TKEY_GLOSSARY_KOUTSU.",
-    "example": "1m1m 3p3p 5s5s 1z1z 2z2z 3z3z 4z4z",
+    "example": ":1m::1m: :5m::5m: :5p::5p: :1z::1z: :2s::2s: :4p::4p: :9m: :9m:",
     "toitsu_based": true
   },
   {
@@ -230,7 +230,7 @@
     "value_open": 2,
     "value_closed": 3,
     "description": "Hand using tiles from only one suit plus honour tiles.",
-    "example": "1m2m3m 4m5m6m 1z1z1z 2z2z + 3m",
+    "example": ":1m::1m::2m::2m::3m::3m::5m::5m::1z::1z::2z: :2z:",
     "common": true,
     "single_suit": true,
     "jihai_based": true
@@ -240,7 +240,7 @@
     "value_open": 2,
     "value_closed": 3,
     "description": "Every TKEY_GLOSSARY_MENTSU and the pair contain a terminal (1 or 9) tile, and there's at least one TKEY_GLOSSARY_SHUNTSU.",
-    "example": "1m2m3m 7p8p9p 1s1s1s 9s9s + 1m",
+    "example": ":1m::2m::3m: :1p::1p::1p: :1s::1s::1s: :7p::8p::9p: :9p::9p:",
     "rare": true,
     "yaochuu_based": true
   },
@@ -250,7 +250,7 @@
     "value_closed": 3,
     "description": "Two pairs of identical TKEY_GLOSSARY_SHUNTSU_P (double iipeikou) in a closed hand.",
     "notes": "It looks like TKEY_YAKU_CHIITOI but because TKEY_YAKU_CHIITOI needs the hand to be 'seen' as 7 pairs instead of having 4x TKEY_GLOSSARY_MENTSU + pair, they're incompatible. TKEY_YAKU_RYANPEIKO always wins because it's worth more.",
-    "example": "1m2m3m 1m2m3m 4p5p6p 4p5p6p + any pair",
+    "example": "((:1m::2m::3m: :1m::2m::3m: :3s::4s::5s: :3s::5s: :1z::1z:)) :4s:",
     "shuntsu_based": true,
     "rare": true
   },
@@ -259,7 +259,7 @@
     "value_open": 5,
     "value_closed": 6,
     "description": "Hand using tiles from only one suit.",
-    "example": "1m2m3m 4m5m6m 7m8m9m 2m2m + 2m",
+    "example": ":1s::1s::1s: :2s::3s::4s: :5s::5s::5s: :6s::7s::8s: :9s::9s:",
     "rare": true,
     "single_suit": true
   },
@@ -268,17 +268,18 @@
     "value_open": null,
     "value_closed": 13,
     "description": "One of each of the thirteen terminals and honours, plus any duplicate of one of them.",
-    "example": "1m9m1p9p1s9s1z2z3z4z5z6z7z + any of the thirteen",
+    "example": "((:1m::9m::1p::9p::1s::9s::1z::2z::3z::4z::4z::5z::6z:)) :7z:",
     "yakuman": true,
     "jihai_based": true,
     "yaochuu_based": true
   },
   {
     "name": "TKEY_YAKU_SUUANKOU",
-    "value_open": null,
+    "value_open": 13,
     "value_closed": 13,
-    "description": "Four concealed TKEY_GLOSSARY_KOUTSU_P.",
-    "example": "2m2m2m 5p5p5p 8s8s8s 3z3z3z + 1z (tsumo)",
+    "description": "",
+    "example": "((:1m::1m::1m: :2s::2s::2s: :3z::3z::3z: :9p::9p::9p:)):5s: :5s:",
+    "notes": "If winning by Ron on a TKEY_GLOSSARY_SHANPON, the winning tile is in an open TKEY_GLOSSARY_KOUTSU, not a closed one.",
     "yakuman": true,
     "toitsu_based": true
   },
@@ -287,7 +288,7 @@
     "value_open": 13,
     "value_closed": 13,
     "description": "Three TKEY_GLOSSARY_KOUTSU_P of all three dragon tiles (haku, hatsu, chun).",
-    "example": "5z5z5z 6z6z6z 7z7z7z 1m2m3m + 1m",
+    "example": ":5z::5z::5z: :6z::6z::6z: :7z::7z::7z: :b::b::b: :b::b:",
     "yakuman": true,
     "toitsu_based": true,
     "jihai_based": true
@@ -297,7 +298,7 @@
     "value_open": 2,
     "value_closed": 2,
     "description": "Two TKEY_GLOSSARY_KOUTSU_P of the dragon tiles, with the 3rd dragon as the pair. Adds with the dragon Yakus to make 4 Han.",
-    "example": "5z5z5z 6z6z6z 7z7z7z 1m2m3m + 1m",
+    "example": ":5z::5z::5z: :6z::6z::6z: :b::b::b: :b::b::b: :7z::7z:",
     "rare": true,
     "toitsu_based": true,
     "jihai_based": true
@@ -307,7 +308,7 @@
     "value_open": 13,
     "value_closed": 13,
     "description": "Three TKEY_GLOSSARY_KOUTSU_P of wind tiles and a pair of the fourth wind.",
-    "example": "1z1z1z 2z2z2z 3z3z3z 4z4z + 1m",
+    "example": ":1z::1z::1z: :2z::2z::2z: :4z::4z::4z: :3z: :b::b::b: :3z:",
     "yakuman": true,
     "toitsu_based": true,
     "jihai_based": true
@@ -317,7 +318,7 @@
     "value_open": 13,
     "value_closed": 13,
     "description": "Four TKEY_GLOSSARY_KOUTSU_P of all four wind tiles.",
-    "example": "1z1z1z 2z2z2z 3z3z3z 4z4z4z + 5m",
+    "example": ":1z::1z::1z: :2z::2z::2z: :4z::4z::4z: :3z::3z: :b::b: :3z:",
     "notes": "In online rulesets this is worth Double Yakuman, but not in most IRL rulesets.",
     "yakuman": true,
     "toitsu_based": true,
@@ -328,7 +329,7 @@
     "value_open": 13,
     "value_closed": 13,
     "description": "Hand composed entirely of honor tiles.",
-    "example": "1z1z1z 2z2z2z 3z3z3z 4z4z + 4z",
+    "example": ":1z::1z::2z::2z::3z::3z::4z::5z::5z::6z::6z::7z::7z: :4z:",
     "yakuman": true,
     "toitsu_based": true,
     "single_suit": true,
@@ -338,8 +339,8 @@
     "name": "TKEY_YAKU_RYUUIISOU",
     "value_open": 13,
     "value_closed": 13,
-    "description": "Hand composed entirely of green tiles: 2s 3s 4s 6s 8s and/or hatsu (6z).",
-    "example": "2s3s4s 2s3s4s 6s6s6s 6z6z6z + 8s8s",
+    "description": "Hand composed entirely of green tiles: 2, 3, 4, 6, 8 sou or Hatsu.",
+    "example": ":2s::3s::4s: :2s::3s::4s: :6s::6s::6s: :8s::8s::8s: :6z::6z:",
     "yakuman": true,
     "single_suit": true,
     "jihai_based": true
@@ -349,7 +350,7 @@
     "value_open": 2,
     "value_closed": 2,
     "description": "Hand composed only of terminal or honour tiles.",
-    "example": null,
+    "example": ":1z::1z::1z: :1p::1p::1p: :9m::9m::9m: :2z::2z: :9s::9s: :2z:",
     "rare": true,
     "toitsu_based": true,
     "jihai_based": true,
@@ -360,7 +361,7 @@
     "value_open": 13,
     "value_closed": 13,
     "description": "Hand composed entirely of terminal tiles (1 and 9 of any suit).",
-    "example": "1m1m1m 9m9m9m 1p1p1p 9p9p9p + 1s",
+    "example": ":1m::1m::1m: :1p::1p::1p: :1s::1s::1s: :9p::9p::9p: :9m: :9m:",
     "yakuman": true,
     "toitsu_based": true,
     "yaochuu_based": true
@@ -370,7 +371,7 @@
     "value_open": 13,
     "value_closed": 13,
     "description": "Four kans (quads) of any kind.",
-    "example": null,
+    "example": ":b::3m::3m::b: :b::5m::5m::b: :b::5p::5p::b: :b::4z::4z::b: :6p: :6p:",
     "yakuman": true,
     "toitsu_based": true
   },
@@ -379,7 +380,8 @@
     "value_open": null,
     "value_closed": 13,
     "description": "Closed hand in one suit with the pattern 1112345678999 plus any 1 more tile of that suit.",
-    "example": "1m1m1m2m3m4m5m6m7m8m9m9m9m + any man tile",
+    "example": "((:1m::1m: :2m::3m::4m: :4m::5m::6m: :7m::8m::9m:: :9m::9m:)) :1m:",
+    "notes": "If the exact 1112345678999 shape is the tenpai hand before winning, is TKEY_YAKU_JUNCHUUREN in online rulesets and double yakuman, but not in most IRL rulesets.",
     "yakuman": true,
     "single_suit": true,
     "yaochuu_based": true
@@ -407,7 +409,7 @@
     "value_open": 1,
     "value_closed": 1,
     "description": "Each TKEY_GLOSSARY_DORA in hand (including Ron tile) adds 1 Han. Stacks with TKEY_GLOSSARY_AKA, and stacks with multiple indicators",
-    "example": null,
+    "example": ":1p:→:2p:→...→:9p:→:1p:\n:5z:→:6z:→:7z:→:5z:\n:1z:→:2z:→:3z:→:4z:→:1z:",
     "common": true,
     "not_yaku": true
   },
@@ -415,8 +417,8 @@
     "name": "TKEY_GLOSSARY_AKA",
     "value_open": 1,
     "value_closed": 1,
-    "description": "If a special red-coloured 5 tile is in hand, each +1 Han.",
-    "example": null,
+    "description": "If a special red-coloured tile is in hand, each +1 Han.",
+    "example": ":0m: :0p: :0s:",
     "common": true,
     "not_yaku": true
   },

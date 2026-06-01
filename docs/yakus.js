@@ -60,10 +60,122 @@
     return '';
   }
 
+  /* ── Example tile rendering ────────────────────────────────── */
+  function makeTileEl(code, rotated) {
+    const wrap = document.createElement('span');
+    wrap.className = 'tile-wrap' + (rotated ? ' tile-rotated' : '');
+
+    const inner = document.createElement('span');
+    inner.className = 'tile-inner';
+
+    const front = document.createElement('img');
+    front.src = 'assets/tiles/Front.svg';
+    front.className = 'tile-front';
+    front.alt = '';
+
+    const face = document.createElement('img');
+    face.src = 'assets/tiles/' + code + '.svg';
+    face.className = 'tile-front';
+    if (code !== "b") {
+      face.className = 'tile-face';
+    }
+    face.alt = '';
+
+    inner.appendChild(front);
+    inner.appendChild(face);
+    wrap.appendChild(inner);
+    return wrap;
+  }
+
+  function makeGroupEl(children) {
+    const wrap = document.createElement('span');
+    wrap.className = 'tile-group-concealed';
+    appendTokens(children, wrap);
+
+    const iconWrap = document.createElement('span');
+    iconWrap.className = 'concealed-icon';
+    const iconImg = document.createElement('img');
+    iconImg.src = 'assets/Concealed_icon.svg';
+    iconImg.alt = 'concealed';
+    iconWrap.appendChild(iconImg);
+    wrap.appendChild(iconWrap);
+
+    return wrap;
+  }
+
+  function appendTokens(tokens, parent) {
+    for (const tok of tokens) {
+      if (tok.type === 'tile') {
+        parent.appendChild(makeTileEl(tok.code, tok.rotated));
+      } else if (tok.type === 'space') {
+        const sp = document.createElement('span');
+        sp.className = 'tile-space';
+        parent.appendChild(sp);
+      } else if (tok.type === 'linebreak') {
+        const br = document.createElement('div');
+        br.className = 'tile-linebreak';
+        parent.appendChild(br);
+      } else if (tok.type === 'text') {
+        parent.appendChild(document.createTextNode(tok.value));
+      } else if (tok.type === 'group') {
+        parent.appendChild(makeGroupEl(tok.children));
+      }
+    }
+  }
+
+  function pushTextTokens(str, out) {
+    for (const ch of str) {
+      if (ch === '\n') {
+        out.push({ type: 'linebreak' });
+      } else if (ch === ' ') {
+        out.push({ type: 'space' });
+      } else {
+        const prev = out[out.length - 1];
+        if (prev && prev.type === 'text') prev.value += ch;
+        else out.push({ type: 'text', value: ch });
+      }
+    }
+  }
+
+  function parseFlat(str, out) {
+    const re = /:([a-zA-Z0-9]+_?):/g;
+    let last = 0, m;
+    while ((m = re.exec(str)) !== null) {
+      if (m.index > last) pushTextTokens(str.slice(last, m.index), out);
+      const raw = m[1];
+      const rotated = raw.endsWith('_');
+      out.push({ type: 'tile', code: rotated ? raw.slice(0, -1) : raw, rotated });
+      last = m.index + m[0].length;
+    }
+    if (last < str.length) pushTextTokens(str.slice(last), out);
+  }
+
+  function parseExample(str) {
+    const tokens = [];
+    const groupRe = /\(\([\s\S]*?\)\)/g;
+    let last = 0, m;
+    while ((m = groupRe.exec(str)) !== null) {
+      if (m.index > last) parseFlat(str.slice(last, m.index), tokens);
+      const children = [];
+      parseFlat(m[0].slice(2, -2), children);
+      tokens.push({ type: 'group', children });
+      last = m.index + m[0].length;
+    }
+    if (last < str.length) parseFlat(str.slice(last), tokens);
+    return tokens;
+  }
+
+  function buildExampleEl(rawStr) {
+    const el = document.createElement('div');
+    el.className = 'yaku-example';
+    appendTokens(parseExample(interp(rawStr)), el);
+    return el;
+  }
+
   /* ── Card rendering ────────────────────────────────────────── */
   function renderCard(y) {
     const card = document.createElement('div');
-    card.className = 'yaku-card' + (y.yakuman ? ' is-yakuman' : '');
+    card.className = 'yaku-card' + (y.common ? ' is-common' : '');
     card.setAttribute('role', 'listitem');
 
     // Tags
@@ -83,10 +195,6 @@
       ? '<div class="yaku-notes">' + interp(y.notes) + '</div>'
       : '';
 
-    const exampleHtml = y.example
-      ? '<div class="yaku-example">' + interp(y.example) + '</div>'
-      : '';
-
     card.innerHTML =
       '<div class="yaku-header">' +
         '<div class="yaku-name">' + interp(y.name) + '</div>' +
@@ -94,8 +202,12 @@
       '</div>' +
       '<div class="yaku-desc">' + interp(y.description) + '</div>' +
       notesHtml +
-      exampleHtml +
       tagsHtml;
+
+    if (y.example) {
+      const exampleEl = buildExampleEl(y.example);
+      card.insertBefore(exampleEl, card.querySelector('.yaku-tags') || null);
+    }
 
     return card;
   }

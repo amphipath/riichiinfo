@@ -199,6 +199,11 @@
     "en": "Nine Gates",
     "romaji": "Chuurenpoutou"
   },
+  "TKEY_YAKU_JUNCHUUREN": {
+    "cn_simp": "纯正 九莲宝灯",
+    "en": "True Nine Gates",
+    "romaji": "Junsei chuurenpoutou"
+  },
   "TKEY_YAKU_TENHOU": {
     "cn_simp": "天和",
     "en": "Blessing of Heaven",
