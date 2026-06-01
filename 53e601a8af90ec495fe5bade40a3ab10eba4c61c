@@ -1,0 +1,25 @@
+docs/yakus.js
+  b1da426b1fc76bc5 280-289
+docs/yakus.css
+  b1da426b1fc76bc5 133
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "53e601a8af90ec495fe5bade40a3ab10eba4c61c",
+  "prompts": {
+    "b1da426b1fc76bc5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bf9f68b3-6918-496d-9d4d-0216a50efe23",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "amphipath",
+      "messages": [],
+      "total_additions": 13,
+      "total_deletions": 6,
+      "accepted_lines": 11,
+      "overriden_lines": 0
+    }
+  }
+}
