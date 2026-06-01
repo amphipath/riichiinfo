@@ -1,0 +1,261 @@
+[
+  {
+    "name": "Riichi",
+    "value_open": null,
+    "value_closed": 1,
+    "description": "Declaring riichi while tenpai with a closed hand. Player places 1000 points on the table and draws only, discarding until winning.",
+    "example": null
+  },
+  {
+    "name": "Ippatsu",
+    "value_open": null,
+    "value_closed": 1,
+    "description": "Winning within one full round of turns after declaring riichi, before any calls are made.",
+    "example": null
+  },
+  {
+    "name": "Menzen Tsumo",
+    "value_open": null,
+    "value_closed": 1,
+    "description": "Winning by self-draw with a closed hand.",
+    "example": null
+  },
+  {
+    "name": "Tanyao",
+    "value_open": 1,
+    "value_closed": 1,
+    "description": "Hand composed entirely of tiles numbered 2–8 (simples), with no terminals or honors.",
+    "example": "2m3m4m 3p4p5p 6s7s8s 2z2z + 5p"
+  },
+  {
+    "name": "Pinfu",
+    "value_open": null,
+    "value_closed": 1,
+    "description": "Closed hand with four sequences (no triplets), a non-yakuhai pair, and a two-sided wait (ryanmen).",
+    "example": "1m2m3m 4p5p6p 7s8s9s 2z2z + 3m or 6p"
+  },
+  {
+    "name": "Iipeiko",
+    "value_open": null,
+    "value_closed": 1,
+    "description": "Two identical sequences in a closed hand.",
+    "example": "1m2m3m 1m2m3m 5p6p7p 9s9s + 5p"
+  },
+  {
+    "name": "Yakuhai (Yakupai)",
+    "value_open": 1,
+    "value_closed": 1,
+    "description": "A triplet or quad of dragon tiles, the round wind, or the seat wind.",
+    "example": "1m2m3m 4p5p6p 7s8s9s 7z7z7z + 2m"
+  },
+  {
+    "name": "Haitei Raoyue",
+    "value_open": 1,
+    "value_closed": 1,
+    "description": "Winning by self-draw on the very last drawable tile.",
+    "example": null
+  },
+  {
+    "name": "Houtei Raoyui",
+    "value_open": 1,
+    "value_closed": 1,
+    "description": "Winning by ron on the very last discarded tile.",
+    "example": null
+  },
+  {
+    "name": "Rinshan Kaihou",
+    "value_open": 1,
+    "value_closed": 1,
+    "description": "Winning by self-draw on the dead-wall draw after declaring a kan.",
+    "example": null
+  },
+  {
+    "name": "Chankan",
+    "value_open": 1,
+    "value_closed": 1,
+    "description": "Winning by ron when an opponent adds a tile to an existing pon to form a closed kan.",
+    "example": null
+  },
+  {
+    "name": "Tsumo (Menzen Tsumo)",
+    "value_open": null,
+    "value_closed": 1,
+    "description": "Winning by self-draw with a fully closed hand. Same as Menzen Tsumo; listed separately for clarity.",
+    "example": null
+  },
+  {
+    "name": "San Ankou",
+    "value_open": 2,
+    "value_closed": 2,
+    "description": "Three concealed triplets (not formed by ron) in the hand.",
+    "example": "3m3m3m 6p6p6p 9s9s9s 1z1z + 9s (tsumo)"
+  },
+  {
+    "name": "San Kantsu",
+    "value_open": 2,
+    "value_closed": 2,
+    "description": "Three kans (quads) of any kind in the hand.",
+    "example": null
+  },
+  {
+    "name": "Toitoi",
+    "value_open": 2,
+    "value_closed": 2,
+    "description": "Hand composed entirely of triplets (and a pair); no sequences.",
+    "example": "2m2m2m 5p5p5p 8s8s8s 3z3z + 3z"
+  },
+  {
+    "name": "San Shoku Doujun",
+    "value_open": 1,
+    "value_closed": 2,
+    "description": "The same sequence appearing in all three suits (man, pin, sou).",
+    "example": "1m2m3m 1p2p3p 1s2s3s 7z7z + 2m"
+  },
+  {
+    "name": "San Shoku Doukou",
+    "value_open": 2,
+    "value_closed": 2,
+    "description": "The same triplet (same number) appearing in all three suits.",
+    "example": "5m5m5m 5p5p5p 5s5s5s 1z1z + 1z"
+  },
+  {
+    "name": "Ittsu (Straight)",
+    "value_open": 1,
+    "value_closed": 2,
+    "description": "Three sequences in the same suit spanning 1–3, 4–6, and 7–9.",
+    "example": "1m2m3m 4m5m6m 7m8m9m 2p2p + 1m"
+  },
+  {
+    "name": "Chanta",
+    "value_open": 1,
+    "value_closed": 2,
+    "description": "Every set and the pair contain at least one terminal or honor tile.",
+    "example": "1m2m3m 7p8p9p 1s1s1s 9z9z + 1m"
+  },
+  {
+    "name": "Chiitoi",
+    "value_open": null,
+    "value_closed": 2,
+    "description": "A hand of seven different pairs. Always worth 25 fu.",
+    "example": "1m1m 3p3p 5s5s 1z1z 2z2z 3z3z 4z4z"
+  },
+  {
+    "name": "Honitsu",
+    "value_open": 2,
+    "value_closed": 3,
+    "description": "Hand using tiles from only one suit plus honor tiles.",
+    "example": "1m2m3m 4m5m6m 1z1z1z 2z2z + 3m"
+  },
+  {
+    "name": "Junchan",
+    "value_open": 2,
+    "value_closed": 3,
+    "description": "Every set and the pair contain a terminal (1 or 9) tile; no honor tiles.",
+    "example": "1m2m3m 7p8p9p 1s1s1s 9s9s + 1m"
+  },
+  {
+    "name": "Ryanpeiko",
+    "value_open": null,
+    "value_closed": 3,
+    "description": "Two sets of two identical sequences (double iipeiko) in a closed hand.",
+    "example": "1m2m3m 1m2m3m 4p5p6p 4p5p6p + any pair"
+  },
+  {
+    "name": "Chinitsu",
+    "value_open": 5,
+    "value_closed": 6,
+    "description": "Hand using tiles from only one suit with no honor tiles.",
+    "example": "1m2m3m 4m5m6m 7m8m9m 2m2m + 2m"
+  },
+  {
+    "name": "Kokushi Musou",
+    "value_open": null,
+    "value_closed": 13,
+    "description": "Yakuman. One of each of the thirteen terminals and honors (1m 9m 1p 9p 1s 9s 1z–7z) plus any duplicate of one of them.",
+    "example": "1m9m1p9p1s9s1z2z3z4z5z6z7z + any of the thirteen"
+  },
+  {
+    "name": "Suuankou",
+    "value_open": null,
+    "value_closed": 13,
+    "description": "Yakuman. Four concealed triplets, all formed without ron (tsumo win or tanki ron).",
+    "example": "2m2m2m 5p5p5p 8s8s8s 3z3z3z + 1z (tsumo)"
+  },
+  {
+    "name": "Daisangen",
+    "value_open": 13,
+    "value_closed": 13,
+    "description": "Yakuman. Three triplets of all three dragon tiles (haku, hatsu, chun).",
+    "example": "5z5z5z 6z6z6z 7z7z7z 1m2m3m + 1m"
+  },
+  {
+    "name": "Shousuushi",
+    "value_open": 13,
+    "value_closed": 13,
+    "description": "Yakuman. Three triplets of wind tiles and a pair of the fourth wind.",
+    "example": "1z1z1z 2z2z2z 3z3z3z 4z4z + 1m"
+  },
+  {
+    "name": "Daisuushi",
+    "value_open": 13,
+    "value_closed": 13,
+    "description": "Yakuman (double yakuman in some rulesets). Four triplets of all four wind tiles.",
+    "example": "1z1z1z 2z2z2z 3z3z3z 4z4z4z + 5m"
+  },
+  {
+    "name": "Tsuuiisou",
+    "value_open": 13,
+    "value_closed": 13,
+    "description": "Yakuman. Hand composed entirely of honor tiles.",
+    "example": "1z1z1z 2z2z2z 3z3z3z 4z4z + 4z"
+  },
+  {
+    "name": "Ryuuiisou",
+    "value_open": 13,
+    "value_closed": 13,
+    "description": "Yakuman. Hand composed entirely of green tiles: 2s 3s 4s 6s 8s and/or hatsu (6z).",
+    "example": "2s3s4s 2s3s4s 6s6s6s 6z6z6z + 8s8s"
+  },
+  {
+    "name": "Chinroutou",
+    "value_open": 13,
+    "value_closed": 13,
+    "description": "Yakuman. Hand composed entirely of terminal tiles (1s and 9s of each suit).",
+    "example": "1m1m1m 9m9m9m 1p1p1p 9p9p9p + 1s"
+  },
+  {
+    "name": "Suukantsu",
+    "value_open": 13,
+    "value_closed": 13,
+    "description": "Yakuman. Four kans (quads) of any kind.",
+    "example": null
+  },
+  {
+    "name": "Chuurenpoutou",
+    "value_open": null,
+    "value_closed": 13,
+    "description": "Yakuman. Closed hand in one suit with the pattern 1112345678999 plus any tile of that suit.",
+    "example": "1m1m1m2m3m4m5m6m7m8m9m9m9m + any man tile"
+  },
+  {
+    "name": "Tenhou",
+    "value_open": null,
+    "value_closed": 13,
+    "description": "Yakuman. Dealer wins on their initial dealt hand (before any draws or discards).",
+    "example": null
+  },
+  {
+    "name": "Chiihou",
+    "value_open": null,
+    "value_closed": 13,
+    "description": "Yakuman. Non-dealer wins by tsumo on their very first draw, before any calls have been made.",
+    "example": null
+  },
+  {
+    "name": "Double Riichi",
+    "value_open": null,
+    "value_closed": 2,
+    "description": "Declaring riichi on the very first discard of the hand, before any calls have been made.",
+    "example": null
+  }
+]
