@@ -11,6 +11,7 @@
   const FILTERS = [
     { id: 'common',       tkey: 'TKEY_FILTER_COMMON',       test: y => y.common === true },
     { id: 'toitsu_based', tkey: 'TKEY_FILTER_TOITSUBASED',  test: y => y.toitsu_based === true },
+    { id: 'shuntsu_based', tkey: 'TKEY_FILTER_SHUNTSUBASED',  test: y => y.shuntsu_based === true },
     { id: 'jihai_based',  tkey: 'TKEY_FILTER_JIHAIBASED',   test: y => y.jihai_based === true },
     { id: 'on_win', tkey: 'TKEY_FILTER_ONWIN', test: y => y.on_win === true},
     { id: 'single_suit',  tkey: 'TKEY_FILTER_SINGLESUIT',   test: y => y.single_suit === true },
@@ -276,7 +277,16 @@
 
     btn.addEventListener('click', e => {
       e.stopPropagation();
-      menu.classList.toggle('open');
+      const isOpen = menu.classList.toggle('open');
+      if (isOpen) {
+        const rect = btn.getBoundingClientRect();
+        const menuWidth = 230;
+        let left = rect.right - menuWidth;
+        if (left < 8) left = rect.left;
+        if (left + menuWidth > window.innerWidth - 8) left = window.innerWidth - menuWidth - 8;
+        menu.style.top  = (rect.bottom + 6) + 'px';
+        menu.style.left = left + 'px';
+      }
     });
 
     // Close on outside click
