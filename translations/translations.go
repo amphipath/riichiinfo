@@ -40,6 +40,8 @@ func SetTranslation(path, tKey, langCode, value string) error {
 	if err != nil {
 		return fmt.Errorf("json write error: %w", err)
 	}
+	f.Seek(0, 0)
+	f.Truncate(0)
 	_, err = f.Write(b)
 	if err != nil {
 		return fmt.Errorf("file write error: %w", err)
