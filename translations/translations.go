@@ -13,9 +13,6 @@ type (
 	Translation map[string]string
 )
 
-//go:embed resources/translations.json
-var rawDict []byte
-
 func SetTranslation(path, tKey, langCode, value string) error {
 	f, err := os.OpenFile(path, os.O_CREATE|os.O_RDWR, 0644)
 	if err != nil {
