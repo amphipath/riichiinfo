@@ -1,0 +1,40 @@
+docs/yakus.js
+  9820f32f69e51c83 63-72,74-77,82-174,207-210
+  3b66e6dc3baefcae 178
+docs/yakus.css
+  3b66e6dc3baefcae 192-193
+  9820f32f69e51c83 237-241,244-262,266-273,275-280,288-289,292-298,300,302-320
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "bdfe0577194c2204136ce7848fbeb41361818c3c",
+  "prompts": {
+    "3b66e6dc3baefcae": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e7a770a7-a484-43db-b316-b334963e4234",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "amphipath",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 3,
+      "overriden_lines": 0
+    },
+    "9820f32f69e51c83": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2181d11b-4e43-4351-9720-f0dc9741f252",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "amphipath",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 178,
+      "overriden_lines": 0
+    }
+  }
+}
