@@ -1,0 +1,36 @@
+docs/yakus.css
+  2d637a8a82d11d2f 249-250,255-256,261-262,269-270
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "64cd5daa0b6438614531892613c1239994f5701d",
+  "prompts": {
+    "2d637a8a82d11d2f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f46d194f-793d-472a-b119-edbb3139331f",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "amphipath",
+      "messages": [],
+      "total_additions": 9,
+      "total_deletions": 9,
+      "accepted_lines": 9,
+      "overriden_lines": 0
+    },
+    "8d585f9d9e0ada39": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f993cbba-7972-4ea5-9f62-321b00dbfd6e",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "amphipath",
+      "messages": [],
+      "total_additions": 9,
+      "total_deletions": 9,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  }
+}
