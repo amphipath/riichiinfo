@@ -49,7 +49,7 @@
     "value_open": null,
     "value_closed": 1,
     "description": "All TKEY_GLOSSARY_MENTSU_P must be TKEY_GLOSSARY_SHUNTSU_P. The head must not be yakuhai. The winning tile must complete one TKEY_GLOSSARY_SHUNTSU from the side.",
-    "example": "((:1m::2m::3m: :2s::3s::4s: :6m::7m::8m: :5m::6m: :4z::4z:)) :7m:",
+    "example": "((:1m::2m::3m: :2s::3s::4s: :6m::7m::8m: :5m::6m: :4z::4z:)):7m:",
     "common": true,
     "shuntsu_based": true
   },
@@ -58,7 +58,7 @@
     "value_open": null,
     "value_closed": 1,
     "description": "Two identical TKEY_GLOSSARY_SHUNTSU_P.",
-    "example": "((:1m::2m::3m: :1m::3m: :b::b::b: :b::b::b: :b::b:)) :2m:",
+    "example": "((:1m::2m::3m: :1m::3m: :b::b::b: :b::b::b: :b::b:)):2m:",
     "shuntsu_based": true
   },
   {
@@ -230,7 +230,7 @@
     "value_open": 2,
     "value_closed": 3,
     "description": "Hand using tiles from only one suit plus honour tiles.",
-    "example": ":1m::1m::2m::2m::3m::3m::5m::5m::1z::1z::2z: :2z:",
+    "example": ":1m::1m::2m::2m::3m::3m::5m::5m::9m::9m::1z::1z::2z: :2z:",
     "common": true,
     "single_suit": true,
     "jihai_based": true
@@ -250,7 +250,7 @@
     "value_closed": 3,
     "description": "Two pairs of identical TKEY_GLOSSARY_SHUNTSU_P (double iipeikou) in a closed hand.",
     "notes": "It looks like TKEY_YAKU_CHIITOI but because TKEY_YAKU_CHIITOI needs the hand to be 'seen' as 7 pairs instead of having 4x TKEY_GLOSSARY_MENTSU + pair, they're incompatible. TKEY_YAKU_RYANPEIKO always wins because it's worth more.",
-    "example": "((:1m::2m::3m: :1m::2m::3m: :3s::4s::5s: :3s::5s: :1z::1z:)) :4s:",
+    "example": "((:1m::2m::3m: :1m::2m::3m: :3s::4s::5s: :3s::5s: :1z::1z:)):4s:",
     "shuntsu_based": true,
     "rare": true
   },
@@ -268,7 +268,7 @@
     "value_open": null,
     "value_closed": 13,
     "description": "One of each of the thirteen terminals and honours, plus any duplicate of one of them.",
-    "example": "((:1m::9m::1p::9p::1s::9s::1z::2z::3z::4z::4z::5z::6z:)) :7z:",
+    "example": "((:1m::9m::1p::9p::1s::9s::1z::2z::3z::4z::4z::5z::6z:)):7z:",
     "yakuman": true,
     "jihai_based": true,
     "yaochuu_based": true
@@ -380,7 +380,7 @@
     "value_open": null,
     "value_closed": 13,
     "description": "Closed hand in one suit with the pattern 1112345678999 plus any 1 more tile of that suit.",
-    "example": "((:1m::1m: :2m::3m::4m: :4m::5m::6m: :7m::8m::9m:: :9m::9m:)) :1m:",
+    "example": "((:1m::1m: :2m::3m::4m: :4m::5m::6m: :7m::8m::9m:: :9m::9m:)):1m:",
     "notes": "If the exact 1112345678999 shape is the tenpai hand before winning, is TKEY_YAKU_JUNCHUUREN in online rulesets and double yakuman, but not in most IRL rulesets.",
     "yakuman": true,
     "single_suit": true,
