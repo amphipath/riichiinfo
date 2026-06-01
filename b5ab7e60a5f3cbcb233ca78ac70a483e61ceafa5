@@ -1,0 +1,23 @@
+translations/cmd/main.go
+  5a9e56834c70f64c 1,4-8,12-67,69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "b5ab7e60a5f3cbcb233ca78ac70a483e61ceafa5",
+  "prompts": {
+    "5a9e56834c70f64c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8d0e8dc4-0bcc-4017-89d8-8cce7227b92b",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "amphipath@users.noreply.github.com",
+      "messages": [],
+      "total_additions": 63,
+      "total_deletions": 72,
+      "accepted_lines": 63,
+      "overriden_lines": 0
+    }
+  }
+}
