@@ -1,0 +1,25 @@
+docs/resources/yakus.json
+  af20e71524e8b99c 12,125-126,148,154-155,294-295,346-347
+docs/resources/translations.json
+  af20e71524e8b99c 317
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "7790384c3e7f1d326269fd504e24fd4088ad58f8",
+  "prompts": {
+    "af20e71524e8b99c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8c1cca5c-1191-4be8-9d4b-39ae4b63d939",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "amphipath",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 147,
+      "overriden_lines": 121
+    }
+  }
+}
