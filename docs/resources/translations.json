@@ -1,7 +1,317 @@
 {
+  "TKEY_YAKU_RIICHI": {
+    "cn_simp": "立直",
+    "en": "Riichi",
+    "romaji": "Riichi"
+  },
+  "TKEY_YAKU_DOUBLE_RIICHI": {
+    "cn_simp": "双立直",
+    "en": "Double Riichi",
+    "romaji": "Double Riichi"
+  },
+  "TKEY_YAKU_IPPATSU": {
+    "cn_simp": "一发",
+    "en": "Ippatsu",
+    "romaji": "Ippatsu"
+  },
+  "TKEY_YAKU_MENZEN_TSUMO": {
+    "cn_simp": "门前清自摸和",
+    "en": "Fully Concealed Hand",
+    "romaji": "Menzen Tsumo"
+  },
   "TKEY_YAKU_TANYAO": {
     "cn_simp": "断幺九",
     "en": "All Simples",
     "romaji": "Tanyao"
+  },
+  "TKEY_YAKU_PINFU": {
+    "cn_simp": "平和",
+    "en": "Pinfu",
+    "romaji": "Pinfu"
+  },
+  "TKEY_YAKU_IIPEIKO": {
+    "cn_simp": "一盃口",
+    "en": "Pure Double Sequence",
+    "romaji": "Iipeikou"
+  },
+  "TKEY_YAKU_HATSU": {
+    "cn_simp": "役牌：发财",
+    "en": "Green Dragon",
+    "romaji": "Hatsu"
+  },
+  "TKEY_YAKU_CHUN": {
+    "cn_simp": "役牌：红中",
+    "en": "Red Dragon",
+    "romaji": "Chun"
+  },
+  "TKEY_YAKU_HAKU": {
+    "cn_simp": "役牌：白板",
+    "en": "White Dragon",
+    "romaji": "Haku"
+  },
+  "TKEY_YAKU_JIKAZE": {
+    "cn_simp": "自风：东/南/西/北",
+    "en": "Seat Wind",
+    "romaji": "Ton/Nan/Sha/Pei (Jikaze)"
+  },
+  "TKEY_YAKU_BAKAZE": {
+    "cn_simp": "场风：东/南/西/北",
+    "en": "Round Wind",
+    "romaji": "Ton/Nan/Sha/Pei (Bakaze)"
+  },
+  "TKEY_YAKU_HAITEI": {
+    "cn_simp": "海底摸月",
+    "en": "Under the Sea",
+    "romaji": "Haitei Raoyue"
+  },
+  "TKEY_YAKU_HOUTEI": {
+    "cn_simp": "河底捞鱼",
+    "en": "Under the River",
+    "romaji": "Houtei Raoyui"
+  },
+  "TKEY_YAKU_RINSHAN": {
+    "cn_simp": "岭上开花",
+    "en": "Rinshan",
+    "romaji": "Rinshan Kaihou"
+  },
+  "TKEY_YAKU_CHANKAN": {
+    "cn_simp": "抢杠",
+    "en": "Robbing a Kan",
+    "romaji": "Chankan"
+  },
+  "TKEY_YAKU_SAN_ANKOU": {
+    "cn_simp": "三暗刻",
+    "en": "Three Concealed Triplets",
+    "romaji": "Sanankou"
+  },
+  "TKEY_YAKU_SAN_KANTSU": {
+    "cn_simp": "三槓子",
+    "en": "Three Kans",
+    "romaji": "Sankantsu"
+  },
+  "TKEY_YAKU_TOITOI": {
+    "cn_simp": "对对和",
+    "en": "All Triplets",
+    "romaji": "Toitoi"
+  },
+  "TKEY_YAKU_SAN_SHOKU_DOUJUN": {
+    "cn_simp": "三色同順",
+    "en": "Mixed Triple Sequence",
+    "romaji": "Sanshoku doujun"
+  },
+  "TKEY_YAKU_SAN_SHOKU_DOUKOU": {
+    "cn_simp": "三色同刻",
+    "en": "Triple Triplets",
+    "romaji": "Sanshoku doukou"
+  },
+  "TKEY_YAKU_ITTSU": {
+    "cn_simp": "一気通貫",
+    "en": "Pure Straight",
+    "romaji": "Ittsuu"
+  },
+  "TKEY_YAKU_CHANTA": {
+    "cn_simp": "混全帯幺九",
+    "en": "Half Outside Hand",
+    "romaji": "Chanta (Honchantai yaochuu)"
+  },
+  "TKEY_YAKU_CHIITOI": {
+    "cn_simp": "七対子",
+    "en": "Seven Pairs",
+    "romaji": "Chiitoitsu"
+  },
+  "TKEY_YAKU_HONITSU": {
+    "cn_simp": "混一色",
+    "en": "Half Flush",
+    "romaji": "Honitsu"
+  },
+  "TKEY_YAKU_JUNCHAN": {
+    "cn_simp": "純全帯幺九",
+    "en": "Pure Outside Hand",
+    "romaji": "Junchan (Junchantai yaochuu)"
+  },
+  "TKEY_YAKU_RYANPEIKO": {
+    "cn_simp": "二盃口",
+    "en": "Twice Pure Double Sequence",
+    "romaji": "Ryanpeikou"
+  },
+  "TKEY_YAKU_CHINITSU": {
+    "cn_simp": "清一色",
+    "en": "Full Flush",
+    "romaji": "Chinitsu"
+  },
+  "TKEY_YAKU_KOKUSHI": {
+    "cn_simp": "国士無双 / 十三幺",
+    "en": "Thirteen Orphans",
+    "romaji": "Kokushi Musou"
+  },
+  "TKEY_YAKU_SUUANKOU": {
+    "cn_simp": "四暗刻",
+    "en": "Four Concealed Triplets",
+    "romaji": "Suuankou"
+  },
+  "TKEY_YAKU_DAISANGEN": {
+    "cn_simp": "大三元",
+    "en": "Big Three Dragons",
+    "romaji": "Daisangen"
+  },
+  "TKEY_YAKU_SHOUSANGEN": {
+    "cn_simp": "小三元",
+    "en": "Little Three Dragons",
+    "romaji": "Shousangen"
+  },
+  "TKEY_YAKU_SHOUSUUSHI": {
+    "cn_simp": "小四喜",
+    "en": "Little Four Winds",
+    "romaji": "Shousuushi"
+  },
+  "TKEY_YAKU_DAISUUSHI": {
+    "cn_simp": "大四喜",
+    "en": "Big Four Winds",
+    "romaji": "Daisuushi"
+  },
+  "TKEY_YAKU_TSUUIISOU": {
+    "cn_simp": "字一色",
+    "en": "All Honors",
+    "romaji": "Tsuuiisou"
+  },
+  "TKEY_YAKU_RYUUIISOU": {
+    "cn_simp": "緑一色",
+    "en": "All Green",
+    "romaji": "Ryuuiisou"
+  },
+  "TKEY_YAKU_CHINROUTOU": {
+    "cn_simp": "清老頭",
+    "en": "All Terminals",
+    "romaji": "Chinroutou"
+  },
+  "TKEY_YAKU_HONROUTOU": {
+    "cn_simp": "混老頭",
+    "en": "Mixed Terminals",
+    "romaji": "Honroutou"
+  },
+  "TKEY_YAKU_SUUKANTSU": {
+    "cn_simp": "四槓子",
+    "en": "Four Kans",
+    "romaji": "Suukantsu"
+  },
+  "TKEY_YAKU_CHUURENPOUTOU": {
+    "cn_simp": "九蓮宝燈",
+    "en": "Nine Gates",
+    "romaji": "Chuurenpoutou"
+  },
+  "TKEY_YAKU_TENHOU": {
+    "cn_simp": "天和",
+    "en": "Blessing of Heaven",
+    "romaji": "Tenhou"
+  },
+  "TKEY_YAKU_CHIIHOU": {
+    "cn_simp": "地和",
+    "en": "Blessing of Earth",
+    "romaji": "Chiihou"
+  },
+  "TKEY_YAKU_DABUTON": {
+    "cn_simp": "双东",
+    "en": "Dabuton (Double Ton)",
+    "romaji": "Dabuton"
+  },
+  "TKEY_YAKU_DABUNAN": {
+    "cn_simp": "双南",
+    "en": "Dabunan (Double Nan)",
+    "romaji": "Dabunan"
+  },
+  "TKEY_GLOSSARY_MENTSU": {
+    "cn_simp": "面子",
+    "en": "Block",
+    "romaji": "Mentsu"
+  },
+  "TKEY_GLOSSARY_MENTSU_P": {
+    "cn_simp": "面子",
+    "en": "Blocks",
+    "romaji": "Mentsus"
+  },
+  "TKEY_GLOSSARY_SHUNTSU": {
+    "cn_simp": "顺子",
+    "en": "Sequence",
+    "romaji": "Shuntsu"
+  },
+  "TKEY_GLOSSARY_SHUNTSU_P": {
+    "cn_simp": "顺子",
+    "en": "Sequences",
+    "romaji": "Shuntsus"
+  },
+  "TKEY_GLOSSARY_KOUTSU": {
+    "cn_simp": "刻子",
+    "en": "Triplet",
+    "romaji": "Shuntsu"
+  },
+  "TKEY_GLOSSARY_KOUTSU_P": {
+    "cn_simp": "刻子",
+    "en": "Triplets",
+    "romaji": "Koutsus"
+  },
+  "TKEY_GLOSSARY_DORA": {
+    "cn_simp": "宝牌",
+    "en": "Dora",
+    "romaji": "Dora"
+  },
+  "TKEY_GLOSSARY_AKA": {
+    "cn_simp": "赤宝牌",
+    "en": "Red Dora",
+    "romaji": "Akadora"
+  },
+  "TKEY_GLOSSARY_URA": {
+    "cn_simp": "里宝牌",
+    "en": "Ura Dora",
+    "romaji": "Uradora"
+  },
+  "TKEY_GLOSSARY_SHANPON": {
+    "cn_simp": "双碰 听牌",
+    "en": "Double Pair wait",
+    "romaji": "shanpon wait"
+  },
+  "TKEY_FILTER_SHUNTSUBASED": {
+    "cn_simp": "顺子有关",
+    "en": "Sequence-related",
+    "romaji": "Shuntsu-related"
+  },
+  "TKEY_FILTER_RARE": {
+    "cn_simp": "不常见",
+    "en": "Rare",
+    "romaji": "Rare"
+  },
+  "TKEY_FILTER_COMMON": {
+    "cn_simp": "常见",
+    "en": "Common",
+    "romaji": "Common"
+  },
+  "TKEY_FILTER_YAKUMAN": {
+    "cn_simp": "役满",
+    "en": "Yakuman",
+    "romaji": "Yakuman"
+  },
+  "TKEY_FILTER_TOITSUBASED": {
+    "cn_simp": "对子有关",
+    "en": "Pair/triplet related",
+    "romaji": "Toitsu/Koutsu-related"
+  },
+  "TKEY_FILTER_YAOCHUUBASED": {
+    "cn_simp": "幺九牌有关",
+    "en": "Terminal-related",
+    "romaji": "Terminal-related"
+  },
+  "TKEY_FILTER_JIHAIBASED": {
+    "cn_simp": "字牌有关",
+    "en": "Honour-related",
+    "romaji": "Jihai-related"
+  },
+  "TKEY_FILTER_SINGLESUIT": {
+    "cn_simp": "一色",
+    "en": "Single suit",
+    "romaji": "Single suit"
+  },
+  "TKEY_FILTER_ONWIN": {
+    "cn_simp": "和了状态",
+    "en": "Win condition related",
+    "romaji": "Win condition related"
   }
 }
