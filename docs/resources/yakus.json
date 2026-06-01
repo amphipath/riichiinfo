@@ -157,7 +157,7 @@
     "value_open": 2,
     "value_closed": 2,
     "description": "Three self-drawn TKEY_GLOSSARY_KOUTSU_P in the hand.",
-    "example": "((:3m::3m::3m: :2m::2m::2m: :5p::5p::5p:)) :1z: :5m_::4m::6m: :1z:",
+    "example": "((:3m::3m::3m: :2m::2m::2m: :5p::5p::5p:)):1z: :5m_::4m::6m: :1z:",
     "notes": "If winning by Ron on a TKEY_GLOSSARY_SHANPON, the winning tile is in an open TKEY_GLOSSARY_KOUTSU, not a closed one.",
     "rare": true,
     "toitsu_based": true

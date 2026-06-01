@@ -9,13 +9,14 @@
 
   /* ── Filter definitions ────────────────────────────────────── */
   const FILTERS = [
-    { id: 'yakuman',      tkey: 'TKEY_FILTER_YAKUMAN',      test: y => y.yakuman === true },
+    { id: 'common',       tkey: 'TKEY_FILTER_COMMON',       test: y => y.common === true },
     { id: 'toitsu_based', tkey: 'TKEY_FILTER_TOITSUBASED',  test: y => y.toitsu_based === true },
     { id: 'jihai_based',  tkey: 'TKEY_FILTER_JIHAIBASED',   test: y => y.jihai_based === true },
-    { id: 'rare',         tkey: 'TKEY_FILTER_RARE',         test: y => y.yakuman === true || y.rare === true },
-    { id: 'common',       tkey: 'TKEY_FILTER_COMMON',       test: y => y.common === true },
+    { id: 'on_win', tkey: 'TKEY_FILTER_ONWIN', test: y => y.on_win === true},
     { id: 'single_suit',  tkey: 'TKEY_FILTER_SINGLESUIT',   test: y => y.single_suit === true },
     { id: 'yaochuu',      tkey: 'TKEY_FILTER_YAOCHUUBASED', test: y => y.yaochuu_based === true },
+    { id: 'rare',         tkey: 'TKEY_FILTER_RARE',         test: y => y.yakuman === true || y.rare === true },
+    { id: 'yakuman',      tkey: 'TKEY_FILTER_YAKUMAN',      test: y => y.yakuman === true },
   ];
 
   /* ── Translation helpers ───────────────────────────────────── */
@@ -180,10 +181,10 @@
 
     // Tags
     const tags = [];
-    if (y.yakuman)             tags.push({ text: t('TKEY_FILTER_YAKUMAN'), cls: 'ym' });
-    if (y.common)              tags.push({ text: t('TKEY_FILTER_COMMON'),  cls: 'com' });
+    // if (y.yakuman)             tags.push({ text: t('TKEY_FILTER_YAKUMAN'), cls: 'ym' });
+    if (y.common)              tags.push({ text: t('TKEY_TAG_COMMON'),  cls: 'com' });
     if (y.rare && !y.yakuman)  tags.push({ text: t('TKEY_FILTER_RARE'),   cls: 'rare' });
-    if (y.not_yaku)            tags.push({ text: 'Bonus',                  cls: 'bonus' });
+    if (y.not_yaku)            tags.push({ text: t('TKEY_TAG_NOTYAKU'),      cls: 'bonus' });
 
     const tagsHtml = tags.length
       ? '<div class="yaku-tags">' +

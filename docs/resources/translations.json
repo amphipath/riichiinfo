@@ -318,5 +318,15 @@
     "cn_simp": "和了状态",
     "en": "Win condition related",
     "romaji": "Win condition related"
+  },
+  "TKEY_TAG_COMMON": {
+    "cn_simp": "常见：必须懂",
+    "en": "Common: Must learn",
+    "romaji": "Common: Must learn"
+  },
+  "TKEY_TAG_NOTYAKU": {
+    "cn_simp": "不算 役",
+    "en": "Not Yaku",
+    "romaji": "Not Yaku"
   }
 }
