@@ -1,0 +1,44 @@
+docs/scoring.css
+  985fe6945a02df90 1-371
+docs/scoring.html
+  985fe6945a02df90 1-88
+docs/scoring.js
+  985fe6945a02df90 1-160
+docs/navbar.js
+  985fe6945a02df90 1-31
+docs/yakus.html
+  985fe6945a02df90 15,38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "f6fda3ec60a2cd9d0bc533cb270ddfe59a453748",
+  "prompts": {
+    "985fe6945a02df90": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ce29d0f7-cac1-4385-a0a1-447bbde24dde",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "amphipath",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 652,
+      "overriden_lines": 0
+    },
+    "b1da426b1fc76bc5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bf9f68b3-6918-496d-9d4d-0216a50efe23",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "amphipath",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 10,
+      "overriden_lines": 0
+    }
+  }
+}
