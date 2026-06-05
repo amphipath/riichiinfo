@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scoring – Riichi Mahjong Reference</title>
+  <link rel="stylesheet" href="yakus.css">
+  <link rel="stylesheet" href="scoring.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="nav-brand" href="index.html">Riichi Info</a>
+
+    <div class="nav-links">
+      <a href="yakus.html">Yakus</a>
+      <a href="scoring.html" class="active">Scoring</a>
+    </div>
+
+    <div class="nav-controls">
+      <button class="nav-btn" id="theme-toggle" aria-label="Toggle theme">Dark</button>
+    </div>
+  </nav>
+
+  <main class="scoring-main">
+    <div class="calc-card">
+
+      <div class="calc-inputs">
+        <h1 class="calc-title">Score Calculator</h1>
+
+        <div class="calc-row">
+          <div class="btn-group" id="seat-group">
+            <button class="btn-opt" data-value="ko" aria-pressed="true">Non-oya</button>
+            <button class="btn-opt" data-value="oya" aria-pressed="false">Oya</button>
+          </div>
+          <div class="btn-group" id="win-group">
+            <button class="btn-opt" data-value="ron" aria-pressed="true">Ron</button>
+            <button class="btn-opt" data-value="tsumo" aria-pressed="false">Tsumo</button>
+          </div>
+        </div>
+
+        <div class="calc-row">
+          <div class="toggle-item">
+            <span>Kiriage Mangan</span>
+            <button type="button" class="tooltip-btn" aria-label="About kiriage mangan" data-tip="3-han 60-fu and 4-han 30-fu round up to mangan">?</button>
+            <button class="toggle-switch" id="kiriage-toggle" role="switch" aria-checked="false">
+              <span class="toggle-thumb"></span>
+            </button>
+          </div>
+          <div class="toggle-item">
+            <span>Kazoe Yakuman</span>
+            <button type="button" class="tooltip-btn tip-right" aria-label="About kazoe yakuman" data-tip="13+ han counts as yakuman">?</button>
+            <button class="toggle-switch" id="kazoe-toggle" role="switch" aria-checked="false">
+              <span class="toggle-thumb"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="calc-section">
+          <span class="calc-label">Fu</span>
+          <div class="chip-grid" id="fu-grid"></div>
+        </div>
+
+        <div class="calc-section">
+          <span class="calc-label">Han</span>
+          <div class="chip-grid" id="han-grid"></div>
+        </div>
+
+        <button class="calc-btn" id="calc-btn">Calculate</button>
+      </div>
+
+      <div class="calc-result-panel" id="calc-result-panel">
+        <div class="result-placeholder" id="result-placeholder">
+          <span class="placeholder-dash">—</span>
+          <span class="placeholder-hint">Select fu &amp; han,<br>then calculate</span>
+        </div>
+        <div class="calc-result" id="calc-result" hidden>
+          <div class="result-score" id="result-score"></div>
+          <div class="result-meta" id="result-meta"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="navbar.js"></script>
+  <script src="scoring.js"></script>
+</body>
+</html>

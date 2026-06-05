@@ -1,0 +1,371 @@
+/* ─── Layout ──────────────────────────────────────────────────── */
+.scoring-main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
+  min-height: calc(100vh - 52px);
+}
+
+/* ─── Card ────────────────────────────────────────────────────── */
+.calc-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: var(--shadow);
+
+  /* mobile: single column */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Inputs panel ────────────────────────────────────────────── */
+.calc-inputs {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.calc-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* ─── Row ─────────────────────────────────────────────────────── */
+.calc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+/* ─── Segmented button group ──────────────────────────────────── */
+.btn-group {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.btn-opt {
+  background: none;
+  border: none;
+  padding: .38rem .9rem;
+  font-size: .875rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: background .12s, color .12s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.btn-opt + .btn-opt {
+  border-left: 1px solid var(--border);
+}
+
+.btn-opt[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ─── Toggle item (label + ? + switch) ───────────────────────── */
+.toggle-item {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+/* ─── Tooltip ? button ────────────────────────────────────────── */
+.tooltip-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--text-muted);
+  background: none;
+  color: var(--text-muted);
+  font-size: .6rem;
+  font-weight: 700;
+  cursor: help;
+  flex-shrink: 0;
+  font-family: inherit;
+  padding: 0;
+  line-height: 1;
+}
+
+.tooltip-btn::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  font-size: .78rem;
+  font-weight: 400;
+  line-height: 1.45;
+  padding: .4rem .6rem;
+  border-radius: 6px;
+  white-space: normal;
+  min-width: 130px;
+  max-width: 200px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .15s;
+  z-index: 50;
+}
+
+.tooltip-btn::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--nav-bg);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .15s;
+  z-index: 50;
+}
+
+.tooltip-btn:hover::after,
+.tooltip-btn:hover::before,
+.tooltip-btn:focus-visible::after,
+.tooltip-btn:focus-visible::before {
+  opacity: 1;
+}
+
+/* Right-align tooltip for items near the right edge */
+.tooltip-btn.tip-right::after {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+.tooltip-btn.tip-right::before {
+  left: auto;
+  right: 4px;
+  transform: none;
+}
+
+/* ─── Toggle switch ───────────────────────────────────────────── */
+.toggle-switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  transition: background .2s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.toggle-switch[aria-checked="true"] {
+  background: var(--accent);
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  pointer-events: none;
+}
+
+.toggle-switch[aria-checked="true"] .toggle-thumb {
+  transform: translateX(20px);
+}
+
+/* ─── Section label (Fu / Han) ───────────────────────────────── */
+.calc-label {
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+/* ─── Fu / Han chip sections ──────────────────────────────────── */
+.calc-section {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+}
+
+.chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+}
+
+.chip {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: .35rem .65rem;
+  font-size: .875rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text);
+  transition: border-color .12s, color .12s, background .12s;
+  min-width: 44px;
+  text-align: center;
+  font-family: inherit;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.chip.selected {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ─── Calculate button ────────────────────────────────────────── */
+.calc-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: .65rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .15s;
+  width: 100%;
+  font-family: inherit;
+}
+
+.calc-btn:hover  { opacity: .88; }
+.calc-btn:active { opacity: .78; }
+
+/* ─── Result panel ────────────────────────────────────────────── */
+.calc-result-panel {
+  /* mobile: just flows below inputs */
+}
+
+/* placeholder: hidden on mobile (only shown in wide split layout) */
+.result-placeholder { display: none; }
+
+.calc-result {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 1.75rem 1.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+/* ─── Score display ───────────────────────────────────────────── */
+.result-score {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.1;
+  letter-spacing: -.02em;
+}
+
+.result-limit {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .15rem .5rem;
+  border-radius: 999px;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.result-limit.mangan   { background: var(--tag-com-bg);   color: var(--tag-com-fg); }
+.result-limit.haneman  { background: var(--tag-bg);        color: var(--tag-fg); }
+.result-limit.baiman   { background: var(--tag-rare-bg);   color: var(--tag-rare-fg); }
+.result-limit.sanbaiman{ background: var(--tag-ym-bg);     color: var(--tag-ym-fg); }
+.result-limit.yakuman  { background: var(--accent);        color: #fff; }
+
+.result-meta {
+  font-size: .85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ─── Wide layout (~16:9) ─────────────────────────────────────── */
+@media (min-width: 740px) {
+  .scoring-main {
+    align-items: center; /* vertically centre the card in the viewport */
+    padding: 1.5rem;
+  }
+
+  .calc-card {
+    max-width: 900px;
+    flex-direction: row; /* two columns */
+  }
+
+  /* Left column: all inputs */
+  .calc-inputs {
+    flex: 1 1 0;
+    padding: 1.5rem;
+    gap: 0.8rem;
+    border-right: 1px solid var(--border);
+  }
+
+  /* Right column: result */
+  .calc-result-panel {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    min-height: 380px; /* keeps panel spacious when result not yet shown */
+  }
+
+  /* Show placeholder on wide before calculation */
+  .result-placeholder:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: .75rem;
+    color: var(--text-muted);
+    width: 100%;
+  }
+
+  .placeholder-dash {
+    font-size: 4rem;
+    font-weight: 800;
+    opacity: .15;
+    line-height: 1;
+  }
+
+  .placeholder-hint {
+    font-size: .85rem;
+    line-height: 1.55;
+  }
+
+  /* Result fills the panel on wide */
+  .calc-result {
+    border-top: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .result-score {
+    font-size: 3.5rem;
+  }
+}
